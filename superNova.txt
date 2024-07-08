@@ -1,0 +1,302 @@
+Instructor: In this video
+
+we'll cover the Spring Boot Starters.
+
+Okay, so what's the problem?
+
+So, as we know, building a Spring application is really hard
+
+and one of those frequently asked questions,
+
+as far as which Maven dependencies do I need to use?
+
+And this is just information that I pulled
+
+from the QA forum for this course,
+
+is that this is a common question
+
+that developers have as far as,
+
+I wanna build a Spring Embassy or hibernate application.
+
+What are the minimum dependencies that I need?
+
+Or if I use a pom, what are the exact dependencies?
+
+Because it's really tricky to figure out how to get started.
+
+And so, you know, it'd be really great
+
+if there was simply a list of Maven dependencies
+
+that's collected as a group of dependencies
+
+for that whole one-stop shopping.
+
+Because as a developer, I really don't wanna waste time
+
+having to search for each dependency
+
+and trying to see what's out there
+
+and see what's available there really really should be
+
+an easier solution for all of this.
+
+So the solution here is by making use of
+
+Spring Boot Starters.
+
+All right, so the Spring boot starters are a curated list
+
+of Maven dependencies.
+
+It's a collection of dependencies that are grouped together,
+
+that have been tested and verified
+
+by the Spring Development team.
+
+And these starters make it much easier
+
+for the developer to get started with Spring
+
+and it also reduces the amount of Maven configuration
+
+that you have to do.
+
+And so also, no more need for searching or hunting
+
+for the right dependency.
+
+Simply use a starter and you're ready to go.
+
+So, you know, let's look at an example with Spring MVC.
+
+So right, so building a traditional Spring MVC app
+
+you normally would need to add like Spring MVC.
+
+You also would add hibernate validator
+
+for some form validation.
+
+And then for given web template
+
+you'd have to put some information there.
+
+So a lot of stuff that you would've to do
+
+individually as far as listing out those dependencies.
+
+Here's a solution by making use of the Spring Boot Starters
+
+for web.
+
+Then you simply add this Maven dependency
+
+to your Maven pom file.
+
+And this is a single entry.
+
+And so this is a Spring Boot Starter.
+
+It's a collection of Maven dependencies
+
+with compatible versions.
+
+So this one dependency entry,
+
+it actually contains other dependencies.
+
+So it contains spring-web, spring-webmvc,
+
+hibernate-validator, json, tomcat, and so on.
+
+So you get a lot of stuff for the price of one
+
+and this saves the developer from having to list
+
+all of the individual dependencies.
+
+And it also makes sure that you have compatible versions
+
+of those dependencies.
+
+And this is really, really helpful.
+
+I love this feature.
+
+In Spring Initializr, in order to get access to this
+
+you simply select web dependency
+
+and you'll automatically get the Spring Boot Starter Web
+
+in your pom XML file.
+
+So here's our initializr website
+
+and let me kind of zoom in a bit.
+
+So once you select web here from the list
+
+then this is the actual Spring boot starters
+
+that they'll add for you.
+
+And this web starter here will basically give you support
+
+for Tomcat and Spring MVC.
+
+So let's look at the example if we're building a Spring app
+
+that needs web and security.
+
+Well then we simply select the dependencies
+
+in the spring initializr.
+
+So here we have dependencies.
+
+We have these items selected for web security, JPA
+
+and thymeleaf and so then when it generates your project
+
+the Spring boot starters will automatically be added
+
+to your Maven pom file.
+
+All right, so let's dig in here.
+
+So we have our dependencies, we have 'em selected.
+
+We do the generation part.
+
+Then here's our pom.xml.
+
+So we'll have this Spring Boot starter web,
+
+we'll have the Spring boot starter security,
+
+we'll have starter data JPA
+
+and we'll also have Starter thymeleaf.
+
+And so it'll do all this for us automatically
+
+by making use of that Spring Initializr website.
+
+All right, so this is pretty good.
+
+So we saw some of the starters.
+
+So there's actually 30 plus Spring Boot Starters
+
+that are created by the Spring Development team.
+
+So there's the Spring Boot Starter web,
+
+so that's for building web apps,
+
+includes validation and REST.
+
+It uses Tomcat as the default embedded server.
+
+There's the starter security for, of course
+
+giving security support.
+
+There's the starter data JPA for adding database support
+
+with JPA and Hibernate and so on.
+
+If you'd like a full list of Spring Boot Starters,
+
+simply go to the link here,
+
+luv2code.com/spring-boot-starters,
+
+this'll automatically redirect you to the official
+
+Spring Documentation that'll list out
+
+all of the Spring Boot Starters.
+
+Now, once you start working with the starters, you know
+
+the frequently asked question is like,
+
+okay I'm adding this Spring Boot starter, X, Y, Z
+
+but you know what's in it?
+
+Like, you know, how do I know what's in this starter, right?
+
+Well, one approach is that you could view the starters
+
+pom.XML file by again, using a link here that I provided
+
+but this normally provides references
+
+to other starters and so on.
+
+So you'll have to kind of dig a bit.
+
+It's somewhat cumbersome to work through it
+
+but there's another solution here.
+
+So what we can do is make use of the IDE.
+
+So most IDEs have a dependency management or view feature
+
+and this is much easier to navigate.
+
+I'll actually show you how to do this with Eclipse
+
+and IntelliJ.
+
+Okay, so for Eclipse users,
+
+basically you open up the pom.xml file,
+
+and then you select the tab for dependency hierarchy
+
+at the bottom, and then you expand the desired starter,
+
+and then you'll actually see the content in that starter.
+
+So from this little screenshot here, we can see
+
+at the top spring boot starter web,
+
+it includes starter-json, tomcat validator, web,
+
+web mvc, and so on.
+
+So that's kind of the basic approach that you can use
+
+to kind of explore the starters to see what's in there,
+
+to see what's available.
+
+For the IntelliJ users you simply use the menu option,
+
+view, tool windows, Maven projects,
+
+and then expand dependencies here.
+
+And then you'll see the list of starters
+
+and then you can kinda expand a given starter
+
+and then you can see the actual contents
+
+of that given starter.
+
+All right, so that's the basic approach for exploring
+
+or finding out what is in a given starter.
+
